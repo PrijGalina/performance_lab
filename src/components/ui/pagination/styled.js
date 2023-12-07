@@ -29,7 +29,7 @@ export const PaginationItem = styled.li`
       color: black;
 
       &:hover {
-        background-color: ${props => props.disabled ? 'transparent' : '#d9d9d9'};
+        background-color: ${props => props.$isDisabled ? 'transparent' : '#d9d9d9'};
         color: black;
       }
     }
@@ -44,7 +44,7 @@ export const PaginationItem = styled.li`
       color: black;
 
       &:hover {
-        background-color: ${props => props.disabled ? 'transparent' : '#d9d9d9'};
+        background-color: ${props => props.$isDisabled ? 'transparent' : '#d9d9d9'};
         color: black;
 
       }
@@ -61,10 +61,10 @@ export const PaginationLink = styled.a`
   line-height: 70px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${props => props.isActive ? 'black' : 'rgba(0, 0, 0, 0.3)'};
+  color: ${props => props.$isActive ? 'black' : 'rgba(0, 0, 0, 0.3)'};
   width: 38px;
   text-align: center;
-  cursor: ${props => props.disabled ? 'default' : 'pointer'};
+  cursor: ${props => props.$isDisabled ? 'default' : 'pointer'};
 
   &:hover {
     color: rgba(0, 0, 0, 0.6)

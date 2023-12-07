@@ -4,8 +4,12 @@ import { Food } from "./pages/food";
 import { Cloth } from "./pages/cloth";
 import { Electronics } from "./pages/electronics";
 import { GlobalStyles } from './styled';
+// import { useSelector } from "react-redux";
 
-function App() {
+export const App = () => {
+  // const store = useSelector(store => store);
+  // console.log('store', store);
+
   return (
     <>
       <GlobalStyles />

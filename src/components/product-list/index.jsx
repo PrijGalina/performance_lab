@@ -1,7 +1,7 @@
 import { ProductListContainer, ProductItem, ProductTop, ProductInfo, ProductImage, ProductOverlay, ProductButton, ProductTitle, ProductPrice, ProductArticles } from './styled';
 import { Pagination } from '../ui/pagination';
 
-export const ProductList = ({data, changePage, page, totalPages}) => {
+export const ProductList = ({data}) => {
   return (
     <>
       <ProductListContainer>
@@ -25,11 +25,7 @@ export const ProductList = ({data, changePage, page, totalPages}) => {
           })
         }
       </ProductListContainer>
-      <Pagination 
-        totalPages={totalPages} 
-        currentPage={page} 
-        changePage={changePage} 
-      /> 
+      <Pagination/> 
     </>
   )
 }

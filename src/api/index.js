@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class ProductsService {
+export class ProductsService {
   static async getFood(limit = 8, page = 1) {
     const response = await axios.get(`https://api.jsonbin.io/v3/b/6570cbcb54105e766fda9445`,
     {

@@ -1,41 +1,38 @@
-import { useEffect, useState } from 'react'
-import ProductsService from '../../api';
-import { useFetching } from '../../hooks/useFetching.js';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { ProductsService } from '../../api';
 import { ProductList } from '../../components/product-list';
-import { useSorted } from '../../hooks/useSorted.js';
-import { PRODUCTS_ON_PAGE } from '../../constants';
+import { changeTotalLoaded } from '../../redux/slices/main/mainSlice.js';
+import { selectProducts } from '../../redux/slices/products/productsSelectors.js';
+import { loadProducts } from '../../redux/slices/products/productsSlice.js';
+import { useFetching } from '../../hooks/useFetching.js';
+import { useSortedAndPagination } from '../../hooks/useSortedAndPagination.js';
 
 export const Electronics = () => {
-  const [products, setProducts] = useState([]);
-  const [limit, setLimit] = useState(PRODUCTS_ON_PAGE);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
+  const dispatch = useDispatch();
+  const products = useSelector(selectProducts);
+  const sortedAndPaginationProducts = useSortedAndPagination(products);
 
-  const [fetchElectronics, isElectronicsLoading, electronicsError] = useFetching(async (id) => {
+  const [fetchElectronics, isElectronicsLoading, electronicsError] = useFetching(async () => {
     const response = await ProductsService.getElectronics();
-    const startIndex = (page - 1) * limit;
-    const paginatedData = [...response.data.record].slice(startIndex, startIndex + limit);
-    setTotalPages(Math.ceil(response.data.record.length / limit));
-    setProducts(paginatedData);
+    dispatch(loadProducts(response.data.record));
+    dispatch(changeTotalLoaded(response.data.record.length));
   });
-
-  let sort_param = "price";
-  let sort_value = "asc";
-
-  const sortedProducts = useSorted(products, sort_param, sort_value);
 
   useEffect(() => {
     fetchElectronics();
-  }, [page])
+  }, [])
 
-  return (
-    <>
-      {
-        isElectronicsLoading && "loading"
-      }
-      {
-        products.length > 0 && <ProductList data={sortedProducts}  changePage={setPage} page={page} totalPages={totalPages}/>
-      }
-    </>
-  )
+  return React.useMemo(() => {
+    return (
+      <>
+        {
+          isElectronicsLoading && "loading"
+        }
+        {
+          sortedAndPaginationProducts.length > 0 && <ProductList data={sortedAndPaginationProducts}/>
+        }
+      </>
+    )
+  },[sortedAndPaginationProducts, isElectronicsLoading])
 }

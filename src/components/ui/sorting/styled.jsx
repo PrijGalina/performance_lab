@@ -54,7 +54,7 @@ export const SortParamLink = styled.a`
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
-  color: ${props => props.isActive ? 'black' : 'rgba(0, 0, 0, 0.3)'};
+  color: ${props => props.$isActive ? 'black' : 'rgba(0, 0, 0, 0.3)'};
   cursor: pointer;
 `
 
@@ -75,7 +75,7 @@ export const SortValueLink = styled.a`
     display: block;
     background-image: url(img/arrow-sort.svg);
     background-repeat: no-repeat;
-    opacity: ${props => props.isActive ? '1' : '0.2'};
+    opacity: ${props => props.$isActive ? '1' : '0.2'};
     transform: ${props => props.type === 'asc' ? 'rotate(-180deg)' : 'none'};
   }
 `
