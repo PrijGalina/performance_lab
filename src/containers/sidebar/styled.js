@@ -2,21 +2,26 @@ import styled from 'styled-components';
 import { COLOR_BASIC_YELLOW } from '../../constants';
 
 export const SidebarContainer = styled.aside`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto) 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
-  padding-left: ${props => props.$visible ? "60px" : '0'};
-  width: ${props => props.$visible ? "328px" : '0'};
-  background-color: #e5e5e5;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   z-index: 5;
-  transition: width 0.5s ease 0s, padding-left 0.5s ease 0s ;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto) 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+  overflow-x: hidden;
+
+  padding-left: ${props => props.$visible ? "60px" : '0px'};
+  width: ${props => props.$visible ? "328px" : '0px'};
+  margin: 0;
+  background-color: #e5e5e5;
+  
+  transition: width 0.5s ease 0s, padding-left 0.5s ease 0s;
   
   &::before{
     content: "";
@@ -65,7 +70,7 @@ export const CartTitle = styled.div`
 export const CartList = styled.ul`
   list-style: none;
   margin: 0;
-  padding: 70px 30px 10px 30px;
+  padding: 70px 30px 10px 0;
 `;
 
 export const CartItem = styled.li`
@@ -98,12 +103,12 @@ export const CartItemPrice = styled.span`
 export const TotalContainer = styled.div`
   grid-area: 2 / 1 / 3 / 2;
   display: ${props => props.$visible ? 'flex' : 'none'};
-  width: ${props => props.$visible ? '268px' : '0'};
+  width: ${props => props.$visible ? 'auto' : '0'};
   align-items: center;
   justify-content: space-between;
   margin-right: 30px;
-  margin-left: 30px;
-  padding-top: 30px;
+  margin-left: 0;
+  padding-top: 15px;
   border-top: 2px solid black;
   font-family: "Gilroy","Verdana",sans-serif;
   font-weight: 800;
@@ -115,7 +120,6 @@ export const TotalContainer = styled.div`
 
 export const TotalTitle = styled.div`
   margin-right: 15px;
-
 `;
 
 export const TotalPrice = styled.div`
@@ -127,8 +131,7 @@ export const BtnContainer = styled.div`
   grid-area: 3 / 1 / 4 / 2;
   position: sticky;
   z-index: 8;
-  bottom: 15px;
-  right: 0;
+  height: 90px;
   display: none;
   width: 0;
   opacity: 0;
@@ -137,7 +140,9 @@ export const BtnContainer = styled.div`
   ${props =>
     props.$visible &&
     `
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       width: 308px;
       opacity: 1;
       transition: opacity 0s linear 2s, width 0.5s ease 0s;
@@ -148,7 +153,7 @@ export const ByuBtn = styled.button`
   position: absolute;
   left: ${props => props.$position === 'left' ? '0' : 'auto'};
   right: ${props => props.$position === 'left' ? 'auto' : '0'};
-  bottom: 15px;
+  bottom: 0;
   z-index: 6;
   height: 40px;
   display: flex;

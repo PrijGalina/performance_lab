@@ -15,7 +15,7 @@ import {
   TotalTitle,
   BtnContainer,
   ByuBtn,
-  InfoContainer
+  InfoContainer,
 } from './styled';
 
 export const Sidebar = () => {

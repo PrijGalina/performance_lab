@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContentContainer = styled.main`
-position: relative;
+  position: relative;
 `;
 
 export const CatalogContainer = styled.section`
