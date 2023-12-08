@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.main`
+export const ContentContainer = styled.main``;
 
-`;
-
-export const CatalogContainer = styled.section`
-
-`;
+export const CatalogContainer = styled.section``;
 
 export const HiddenTitle = styled.h2`
   position: absolute;
@@ -20,4 +16,10 @@ export const HiddenTitle = styled.h2`
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+`;
+
+export const CatalogInner = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 220px);
 `;

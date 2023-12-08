@@ -1,4 +1,15 @@
-import { ProductListContainer, ProductItem, ProductTop, ProductInfo, ProductImage, ProductOverlay, ProductButton, ProductTitle, ProductPrice, ProductArticles } from './styled';
+import { 
+  ProductListContainer, 
+  ProductItem, 
+  ProductTop, 
+  ProductInfo, 
+  ProductImage, 
+  ProductOverlay, 
+  ProductButton, 
+  ProductTitle, 
+  ProductPrice, 
+  ProductArticles 
+} from './styled';
 import { Pagination } from '../ui/pagination';
 
 export const ProductList = ({data}) => {

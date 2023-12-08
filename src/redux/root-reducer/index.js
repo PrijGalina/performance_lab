@@ -1,6 +1,6 @@
 import { combineSlices } from '@reduxjs/toolkit'
 import { mainSlice } from '../slices/main/mainSlice.js';
-import { productsSlice } from '../slices/products/productsSlice.js';
+import { dataSlice } from '../slices/data/dataSlice.js';
+import { cartSlice } from '../slices/cart/cartSlice.js';
 
-
-export const rootReducer = combineSlices(mainSlice, productsSlice);
+export const rootReducer = combineSlices(mainSlice, dataSlice, cartSlice);

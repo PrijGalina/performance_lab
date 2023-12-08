@@ -1,35 +1,35 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { SORT_TYPES, PRODUCTS_ON_PAGE } from "../../../constants";
+import { SORT_TYPES, CATALOG_SECTIONS } from "../../../constants";
 
 const initialState = {
-  num_page: 1,
-  total_loaded: 0,
-  limit: PRODUCTS_ON_PAGE,
-  sort_param: SORT_TYPES.ByPrice,
-  sort_value: SORT_TYPES.ByAsc
+  numPage: 1,
+  catalogSection: localStorage.getItem('currentPage') || CATALOG_SECTIONS.Food,
+  quantityOfItem: 0,
+  sortParam: SORT_TYPES.ByPrice,
+  sortValue: SORT_TYPES.ByAsc
 };
 
 export const mainSlice = createSlice({
   name: 'main',
   initialState,
   reducers: {
-    changeNumberPage: (state, action) => {
-      state.num_page = action.payload;
+    setNumberPage: (state, action) => {
+      state.numPage = action.payload;
     },
-    changeSortParam: (state, action) => {
-      state.sort_param = action.payload;
+    setSortParam: (state, action) => {
+      state.sortParam = action.payload;
     },
-    changeSortValue: (state, action) => {
-      state.sort_value = action.payload;
+    setSortValue: (state, action) => {
+      state.sortValue = action.payload;
     },
-    changeLimit: (state, action) => {
-      state.limit = action.payload;
+    setQuantityOfItem: (state, action) => {
+      state.quantityOfItem = action.payload;
     },
-    changeTotalLoaded: (state, action) => {
-      state.total_loaded = action.payload;
+    setCatalogSection: (state, action) => {
+      state.catalogSection = action.payload;
     },
   },
 });
 
-export const { changeNumberPage, changeSortParam, changeSortValue, changeLimit, changeTotalLoaded } = mainSlice.actions;
+export const { setNumberPage, setSortParam, setSortValue, setLimit, setQuantityOfItem, setCatalogSection } = mainSlice.actions;
 export default mainSlice.reducer;

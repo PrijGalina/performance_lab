@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLOR_BASIC_YELLOW } from '../../constants';
 
 export const ProductListContainer = styled.ul`
   list-style: none;
@@ -11,6 +12,7 @@ export const ProductListContainer = styled.ul`
   grid-template-columns: 300px 300px 300px 300px;
   margin-bottom: 40px;
   justify-content: space-between;
+  min-height: calc(100vh - 480px);
 `;
 
 export const ProductItem = styled.li`
@@ -97,7 +99,7 @@ export const ProductButton = styled.button`
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    background-color: #f0c52e;
+    background-color: ${COLOR_BASIC_YELLOW};
     z-index: -1;
   }
 

@@ -1,5 +1,5 @@
-export const selectNumPage = state => state.main.num_page;
-export const selectLimit = state => state.main.limit;
-export const selectSortParam = state => state.main.sort_param;
-export const selectSortValue = state => state.main.sort_value;
-export const selectTotalLoaded = state => state.main.total_loaded;
+export const getNumPage = state => state.main.numPage;
+export const getSortParam = state => state.main.sortParam;
+export const getSortValue = state => state.main.sortValue;
+export const getQuantityOfItem = state => state.main.quantityOfItem;
+export const getCatalogSection = state => state.main.catalogSection;

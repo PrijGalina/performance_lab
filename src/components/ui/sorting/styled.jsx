@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLOR_BASIC_GREY } from '../../../constants';
 
 export const SortContainer = styled.div`
   display: -ms-grid;
@@ -11,7 +12,7 @@ export const SortContainer = styled.div`
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #e5e5e5;
+  background-color: ${COLOR_BASIC_GREY};
 `;
 
 export const SortTitle = styled.h3`

@@ -1,3 +1,7 @@
+export const QUANTITY_PER_PAGE = 8;
+export const COLOR_BASIC_YELLOW = '#f0c52e';
+export const COLOR_BASIC_GREY = '#e5e5e5';
+
 export const SORT_TYPES = {
   ByPrice: 'price',
   ByTitle: 'title',
@@ -42,14 +46,15 @@ export const SORT_VALUE = [
   }
 ];
 
-export const PRODUCTS_ON_PAGE = 8;
-
 export const ACTION_TYPE = {
-  ChangeNumberPage: 'main/changeNumberPage',
-  ChangeSortParam: 'main/changeSortParam',
-  ChangeSortValue: 'main/changeSortValue',
-  ChangeTotalPages: 'main/changeTotalPages',
-  ChangeLimit: 'main/changeLimit',
+  SetNumberPage: 'main/setNumberPage',
+  SetSortParam: 'main/setSortParam',
+  SetSortValue: 'main/setSortValue',
+  SetQuantityOfItem: 'main/setQuantityOfItem',
+  SetCatalogSection: 'main/setCatalogSection',
+  FetchDataRequest: 'data/fetchDataRequest',
+  FetchDataSuccess: 'data/fetchDataSuccess',
+  FetchDataFailure: 'data/fetchDataFailure'
 };
 
 export const PAGINATION_CLICK_TYPE = {
@@ -57,3 +62,9 @@ export const PAGINATION_CLICK_TYPE = {
   Back: 'back',
   Specific: 'specific'
 };
+
+export const CATALOG_SECTIONS = {
+  Food: 'food',
+  Cloth: 'cloth',
+  Electronic: 'electronics',
+}

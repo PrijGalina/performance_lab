@@ -1,14 +1,11 @@
 import {useMemo} from 'react';
-import { SORT_TYPES } from '../constants';
+import { SORT_TYPES, QUANTITY_PER_PAGE } from '../constants';
 import { useSelector } from 'react-redux';
-import { selectLimit, selectNumPage, selectSortParam, selectSortValue } from '../redux/slices/main/mainSelectors';
+import { getNumPage, getSortParam, getSortValue } from '../redux/slices/main/mainSelectors';
 
 export const useSorted = (products, param, value) => {
   const sorted = useMemo(() => {
-    if(products.length === 0){
-      return []
-    }
-
+    if(products.length === 0) return [];
     switch(param){
       case SORT_TYPES.ByPrice:
         switch(value){
@@ -37,12 +34,11 @@ export const useSorted = (products, param, value) => {
 }
 
 export const useSortedAndPagination = (products) => {
-  const param = useSelector(selectSortParam);
-  const value = useSelector(selectSortValue);
-  const pageNumber = useSelector(selectNumPage);
+  const param = useSelector(getSortParam);
+  const value = useSelector(getSortValue);
+  const pageNumber = useSelector(getNumPage);
   const sortedProducts = useSorted(products, param, value);
-  const limit = useSelector (selectLimit); 
-  const startIndex = (pageNumber - 1) * limit;
-  const sortedAndPaginatedData = useMemo(() => [...sortedProducts].slice(startIndex, startIndex + limit),[sortedProducts, limit, startIndex]);
+  const startIndex = (pageNumber - 1) * QUANTITY_PER_PAGE;
+  const sortedAndPaginatedData = useMemo(() => [...sortedProducts].slice(startIndex, startIndex + QUANTITY_PER_PAGE),[sortedProducts, QUANTITY_PER_PAGE, startIndex]);
   return sortedAndPaginatedData;
 }

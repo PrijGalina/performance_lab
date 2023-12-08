@@ -9,6 +9,5 @@ export const usePagination = (totalPages) => {
     return result;
   }, [totalPages]);
 
-  
   return pagesArray;
 }
