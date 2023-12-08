@@ -12,7 +12,6 @@ export const ProductListContainer = styled.ul`
   grid-template-columns: 300px 300px 300px 300px;
   margin-bottom: 40px;
   justify-content: space-between;
-  min-height: calc(100vh - 480px);
 `;
 
 export const ProductItem = styled.li`
@@ -22,6 +21,21 @@ export const ProductItem = styled.li`
 export const ProductTop = styled.div`
   position: relative;
   margin-bottom: 30px;
+
+  &::before {
+    content: ${props => props.$isAlreadyInCart ? "''" : 'none'};
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(238, 238, 238, 0.6);
+    z-index: 2;
+  }
+
+  > div {
+    display: ${props => props.$isAlreadyInCart ? "block" : 'none'};
+  }
 
   &:hover {
     &::before {
@@ -105,14 +119,14 @@ export const ProductButton = styled.button`
 
   &:hover {
     &::before {
-      height: 40px;
+      height: ${props => props.$isAlreadyInCart ? "8px" : '40px'};
       transition: height 0.5s ease 0s;
     }
   }
 
   &:focus {
     &::before {
-      height: 40px;
+      height: ${props => props.$isAlreadyInCart ? "8px" : '40px'};
       transition: height 0.5s ease 0s;
     }
   }

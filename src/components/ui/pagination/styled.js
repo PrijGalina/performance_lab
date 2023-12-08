@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PaginationList = styled.ul`
   list-style: none;
-  margin: 0 0 50px;
+  margin: 0;
   padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;

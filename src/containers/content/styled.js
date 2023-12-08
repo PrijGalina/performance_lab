@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.main``;
+export const ContentContainer = styled.main`
+position: relative;
+`;
 
-export const CatalogContainer = styled.section``;
+export const CatalogContainer = styled.section`
+  position: relative;
+  height: 100%;
+`;
 
 export const HiddenTitle = styled.h2`
   position: absolute;
@@ -21,5 +26,8 @@ export const HiddenTitle = styled.h2`
 export const CatalogInner = styled.div`
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 220px);
+  height: calc(100% - 70px);
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
