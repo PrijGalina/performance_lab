@@ -5,11 +5,11 @@ import { setSortParam, setSortValue } from '../../../redux/slices/main/mainSlice
 import { getSortParam, getSortValue } from '../../../redux/slices/main/mainSelectors.js';
 
 export const Sorting = () => {
-  let dispatch = useDispatch();
-  let activeParam = useSelector(getSortParam);
-  let activeValue = useSelector(getSortValue);
+  const dispatch = useDispatch();
+  const activeParam = useSelector(getSortParam);
+  const activeValue = useSelector(getSortValue);
 
-  let hahdleChanseSort = (type, item) => {
+  const hahdleChanseSort = (type, item) => {
     switch (type) {
       case SORT_CLICK_TYPES.ParameterClick:
         if (activeParam === item.type) return;
@@ -26,7 +26,7 @@ export const Sorting = () => {
 
   return (
     <SortContainer>
-      <SortTitle className="section-title">Сортировка:</SortTitle>
+      <SortTitle>Sorting:</SortTitle>
       <SortParamList>
         {
           SORT_PARAM.map((item) => {

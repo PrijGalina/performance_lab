@@ -19,17 +19,17 @@ export const SORT_PARAM = [
   {
     key: 'by-price',
     type: SORT_TYPES.ByPrice,
-    title: 'По цене',
+    title: 'Price',
   },
   {
     key: 'by-title',
     type: SORT_TYPES.ByTitle,
-    title: 'По названию',
+    title: 'Title',
   },
   {
     key: 'by-vendor-code',
     type: SORT_TYPES.ByVendorCode,
-    title: 'По артикулу',
+    title: 'Code',
   }
 ];
 

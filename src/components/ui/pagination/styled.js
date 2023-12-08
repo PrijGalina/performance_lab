@@ -26,11 +26,11 @@ export const PaginationItem = styled.li`
     & > a {
       width: 120px;
       text-align: center;
-      color: black;
+      color: ${props => props.$isDisabled ? 'rgba(0, 0, 0, 0.3)' : 'black'};
 
       &:hover {
         background-color: ${props => props.$isDisabled ? 'transparent' : '#d9d9d9'};
-        color: black;
+        color: ${props => props.$isDisabled ? 'rgba(0, 0, 0, 0.3)' : 'black'};
       }
     }
   }
@@ -41,11 +41,11 @@ export const PaginationItem = styled.li`
     & > a {
       width: 120px;
       text-align: center;
-      color: black;
+      color: ${props => props.$isDisabled ? 'rgba(0, 0, 0, 0.3)' : 'black'};
 
       &:hover {
         background-color: ${props => props.$isDisabled ? 'transparent' : '#d9d9d9'};
-        color: black;
+        color: ${props => props.$isDisabled ? 'rgba(0, 0, 0, 0.3)' : 'black'};
 
       }
     }

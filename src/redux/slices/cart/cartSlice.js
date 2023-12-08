@@ -12,11 +12,14 @@ export const cartSlice = createSlice({
     setData(state, action) {
       state.data = [...state.data, action.payload];
     },
+    resetData(state) {
+      state.data = [];
+    },
     setSidebarVisibility(state, action) {
-      state.showSidebar = action.payload;
+      state.sidebarVisibility = action.payload;
     },
   },
 });
 
-export const { setData, setSidebarVisibility } = cartSlice.actions;
+export const { setData, setSidebarVisibility, resetData } = cartSlice.actions;
 export default cartSlice.reducer;

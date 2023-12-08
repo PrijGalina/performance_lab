@@ -17,13 +17,5 @@ export const CartCounter = styled.div`
   line-height: 20px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    //color: ${COLOR_BASIC_YELLOW};
-
-    & > svg {
-      fill: ${COLOR_BASIC_YELLOW};
-    }
-  }
+  cursor: default;
 `;

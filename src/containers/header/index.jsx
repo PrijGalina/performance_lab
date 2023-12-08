@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 import { getData } from '../../redux/slices/cart/cartSelectors.js';
 
 export const Header = () => {
-  let cart = useSelector(getData);
-  let cartCounter = cart.length;
+  const cart = useSelector(getData);
+  const cartCounter = cart.length;
 
   return (
     <HeaderContainer>

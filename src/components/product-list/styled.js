@@ -101,6 +101,7 @@ export const ProductButton = styled.button`
   background-color: transparent;
   z-index: 2;
   cursor: pointer;
+  pointer-events: ${props => props.$isAlreadyInCart ? "none" : 'default'};
 
   &::before {
     content: "";

@@ -20,7 +20,7 @@ function containsObject(arr, obj) {
 }
 
 export const ProductList = ({data}) => {
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
   let cart = useSelector(getData);
 
   const handleToCartClick = (item) => {
@@ -50,7 +50,7 @@ export const ProductList = ({data}) => {
                 <ProductInfo>
                   <ProductTitle>{product.title}</ProductTitle>
                   <ProductArticles>{product.vendor_code}</ProductArticles>
-                  <ProductPrice>{product.price}€</ProductPrice>
+                  <ProductPrice>{product.price} €</ProductPrice>
                 </ProductInfo>
               </ProductItem>
             )
