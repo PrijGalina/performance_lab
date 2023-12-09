@@ -34,7 +34,7 @@ export const Pagination = () => {
       <PaginationList>
         <PaginationItem $isDisabled={currentPage === 1}>
           <PaginationLink onClick={() => handleClickPage(PAGINATION_CLICK_TYPE.Back)} $isDisabled={currentPage === 1}>
-            Назад
+            Prev
           </PaginationLink>
         </PaginationItem>
         {pagesArray.map(page => 
@@ -46,7 +46,7 @@ export const Pagination = () => {
         )}
         <PaginationItem $isDisabled={currentPage === totalPages}>
           <PaginationLink onClick={() => currentPage < totalPages && handleClickPage(PAGINATION_CLICK_TYPE.Forward)} $isDisabled={currentPage === totalPages}>
-            Вперед
+            Next
           </PaginationLink>
         </PaginationItem>
       </PaginationList>
