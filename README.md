@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# React Ecommerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект был создан в рамках выполнения тестового задания. Задача заключалась в разработке приложения, включающего страницы с товарами из трех категорий (еда, одежда, электроника), с возможностью пагинации, сортировки по столбцам и корзиной в виде сайдбара.
 
-## Available Scripts
+![Preview](https://res.cloudinary.com/dhk9y7wf1/image/upload/v1702083859/2_c6dqmb.png)
 
-In the project directory, you can run:
+## Демонстрация
+Проект доступен для просмотра по [ссылке](https://prijgalina.github.io/performance_lab/).
 
-### `npm start`
+## Функционал
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Отображение категорий товаров:** Приложение предоставляет возможность просматривать и выбирать товары из различных категорий: еда, одежда, электроника. Страницы созданы содержат пагинацию для удобного перехода между страницами. Товары, которые добавлены в корзину, подсвечены в списке.  
+- **Сортировка товаров:** Добавлена функциональность сортировки товаров по различным критериям, таким как цена, наименование или артикул товара. Реализована возможность сортировки как по возрастанию, так и по убыванию.
+- **Корзина товаров:** Разработана корзина в виде сайдбара, который появляется справа и содержит список добавленных в неё товаров, общую сумму, и кнопки: для очистки корзины и для оформления заказа.
+<br> <!-- отступ -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![Preview](https://res.cloudinary.com/dhk9y7wf1/image/upload/v1702083861/4_rigoi4.png)
+![Preview](https://res.cloudinary.com/dhk9y7wf1/image/upload/v1702083860/3_wejqg8.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Используемые инструменты
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React:**
+- **Redux и Redux-Toolkit:** для управления глобальным состоянием и оптимизации хранилища использовались Redux и Redux-Toolkit.
+- **Redux-Saga:** для обработки побочных эффектов и асинхронных действий в приложении использовалась библиотека Redux-Saga.
+- **Axios:** для выполнения HTTP-запросов и общения с сервером использовалась библиотека Axios.
+- **Styled Components:** для создания стилей интерфейса приложения использовалась библиотека Styled Components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Взаимодействие с сервером
+Для наполнения приложения данными я использовала моковые данные, которые были созданы и загружены через сервис [JSONbin](https://jsonbin.io/app/bins#!)
+Данные доступены по адресам:
+- **Electronics:** https://api.jsonbin.io/v3/b/6570dc7154105e766fda9b7c
+- **Cloth:** https://api.jsonbin.io/v3/b/6570d55f0574da7622d13874 
+- **Food:** https://api.jsonbin.io/v3/b/6570cbcb54105e766fda9445 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Запуск проекта
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Для запуска проекта локально, необходимо клонировать репозиторий и установить зависимости:
 
-## Learn More
+```bash
+git clone https://github.com/PrijGalina/performance_lab.git
+cd performance_lab
+npm install
+npm start
+```
+Приложение будет работать на http://localhost:3000/.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Планируемые улучшения
+- **Адаптивность:** Добавление адаптивности для корректного отображения на различных устройствах.
+- **Переход на TypeScript:** Переписывание проекта на TypeScript для улучшения типизации и снижения числа возможных ошибок.
+- **Множественные товары:** Возможность добавления нескольких товаров одной позиции в корзину для упрощения процесса покупки.
+- **Расширение функционала корзины:** Доработка функционала корзины, включая возможность удаления отдельных товаров для управления содержимым.
+- **Добавление авторизации пользователя:** Доработка функционала корзины, включая возможность удаления отдельных товаров для управления содержимым.
+- **Авторизация пользователей:** Реализация системы авторизации для учетных записей пользователей.
+- **Избранные товары:** Добавление функционала избранных товаров для сохранения и последующего просмотра понравившихся товаров.
+- **Просмотр карточки товара:** Разработка отдельной страницы для просмотра детальной информации о товаре.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
