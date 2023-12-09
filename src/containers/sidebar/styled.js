@@ -57,7 +57,7 @@ export const CartTitle = styled.div`
   align-items: center;
   padding: 25px 30px 25px 0;
   margin: 0;
-  font-family: "Gilroy","Verdana",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -83,7 +83,7 @@ export const CartItem = styled.li`
 export const CartItemNum = styled.span`
   display: block;
   width: 25px;
-  font-family: "Gilroy","Verdana",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 14px;
 `;
@@ -95,7 +95,7 @@ export const CartItemTitle = styled.span`
 export const CartItemPrice = styled.span`
   display: block;
   margin-left: auto;
-  font-family: "Gilroy","Verdana",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 16px;
 `;
@@ -110,7 +110,7 @@ export const TotalContainer = styled.div`
   margin-left: 0;
   padding-top: 15px;
   border-top: 2px solid black;
-  font-family: "Gilroy","Verdana",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -163,7 +163,7 @@ export const ByuBtn = styled.button`
   padding: 10px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Gilroy","Verdana",sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: ${props => props.$position === 'left' ? '#f0c52e7d' : COLOR_BASIC_YELLOW};
   font-weight: 800;
   font-size: 18px;

@@ -55,7 +55,7 @@ export const PaginationItem = styled.li`
 export const PaginationLink = styled.a`
   display: block;
   height: 70px;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 70px;

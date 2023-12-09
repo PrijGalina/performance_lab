@@ -11,7 +11,7 @@ export const CartCounter = styled.div`
   margin-left: auto;
   display: flex;
   align-items: center;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 20px;

@@ -89,7 +89,7 @@ export const ProductButton = styled.button`
   padding: 9px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -135,7 +135,7 @@ export const ProductButton = styled.button`
 
 export const ProductTitle = styled.a`
     grid-area: 1 / 1 / 2 / 2;
-    font-family: "Gilroy", "Verdana", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -148,7 +148,7 @@ export const ProductPrice = styled.span`
   align-self: center;
   justify-self: end;
   display: block;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -157,7 +157,7 @@ export const ProductPrice = styled.span`
 
 export const ProductArticles = styled.span`
   grid-area: 2 / 1 / 3 / 2;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;

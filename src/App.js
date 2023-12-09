@@ -13,7 +13,7 @@ const history = createBrowserHistory();
 
 export const App = () => {
   const dispatch = useDispatch();
-
+  const basename = window.location.hostname.includes('github.io') ? '/performance_lab' : '/';
   const RedirectToFood = () => {
     localStorage.setItem('currentPage', CATALOG_SECTIONS.Food);
     dispatch({type: ACTION_TYPE.SetCatalogSection, payload: CATALOG_SECTIONS.Food});
@@ -23,7 +23,7 @@ export const App = () => {
   return (
     <>
       <GlobalStyles />
-      <BrowserRouter history={history}>
+      <BrowserRouter history={history} basename={basename}>
         <Layout>
           <Routes>
             <Route path="/" element={<RedirectToFood />} />

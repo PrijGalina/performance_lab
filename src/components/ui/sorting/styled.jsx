@@ -18,7 +18,7 @@ export const SortContainer = styled.div`
 export const SortTitle = styled.h3`
   padding: 25px 0;
   margin: 0;
-  font-family: "Gilroy", "Verdana", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;

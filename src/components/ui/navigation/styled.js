@@ -17,7 +17,7 @@ export const NavbarLink = styled(NavLink)`
   color: black;
   text-decoration: none;
   margin-right: 30px;
-  font-family: "Gilroy";
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 20px;
 
